@@ -10,4 +10,12 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+	$('.project').click(projectClick)
+}
+
+function projectClick(e) { 
+    console.log("Name clicked");
+    // prevent the page from reloading      
+    e.preventDefault()
+    ga("send", "event", 'like', 'click')
 }
